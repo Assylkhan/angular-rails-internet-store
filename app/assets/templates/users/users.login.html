@@ -1,0 +1,21 @@
+<h1>Login</h1>
+
+<div class="authError">
+  <p>{{authError}}</p>
+</div>
+
+<form name="login" class="session">
+  <fieldset>
+    <label for="email">email</label>
+    <span style="color: #F04040" class="error" ng-show="login.email.$error.required">
+    Required!</span>
+    <span class="error" ng-show="login.email.$error.email">
+    Not valid email!</span>
+    <input type="email" name="email" ng-model="email">
+
+    <label for="password">password</label>
+    <input type="password" id="password" ng-model="password">
+    
+    <input ng-disabled="expression" type="button" ng-click="logIn(email, password)" class="btn btn-large btn-primary" value="log in">
+  </fieldset>
+</form>

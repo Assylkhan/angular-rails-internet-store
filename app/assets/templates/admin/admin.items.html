@@ -1,0 +1,38 @@
+<p style="text-align: center; font-size: 3em;">Items</p>
+<div id="items">
+  <p>
+    <input class="col-md-3" type="text" ng-model="search">
+    <input type="button" value="search" ng-click="getItems(search)">
+  </p>
+  <p class="error">{{itemError}}</p>
+  <table class="table table-striped">
+    <th>id</th>
+    <th>image</th>
+    <th>name</th>
+    <th>type</th>
+    <th>real price, $</th>
+    <th>price, $</th>
+    <th>count</th>
+    <th>bring date</th>
+    <th>edit</th>
+    <th>delete</th>
+    <tr ng-repeat="item in items">
+      <td>{{item.id}}</td>
+      <td><img ng-src="https://s3.amazonaws.com/Angular-rails-store/images/{{item.id}}/{{item.image_file_name}}"></td>
+      <td><a ng-click="reviewItem(item.id)">{{item.name}}</a></td>
+      <td>{{item.view}}</td>
+      <td>{{item.real_price}}$</td>
+      <td>{{item.price}}</td>
+      <td>{{item.count}}</td>
+      <td>{{item.created_at | date : 'mediumDate'}}</td>
+      <td><a ng-click="edit(item.id)">edit</a></td>
+      <td><a ng-click="remove(item.id)">delete</a></td>
+    </tr>
+  </table>
+  
+  <br class="clear">
+  
+  <ul class="pagination">
+    <li ng-repeat="n in range" ng-class="{active: n == currentPage}" ng-click="getPage(n)"><a href="#">{{n}}</a></li>
+  </ul>
+</div>

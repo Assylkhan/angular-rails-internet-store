@@ -1,0 +1,30 @@
+<form>
+  <fieldset>
+    <label for="name">name</label>
+    <input type="text" id="name" ng-model="item.name">
+
+    <label for="real_price">real_price</label>
+    <input type="text" id="real_price" ng-model="item.real_price">
+
+    <label for="price">price</label>
+    <input type="text" id="price" ng-model="item.price">
+
+    <label for="description">description</label>
+    <input type="text" id="description" ng-model="item.description">
+
+    <label for="weight">weight</label>
+    <input type="text" id="weight" ng-model="item.weight">
+
+    <label for="count">count</label>
+    <input type="text" id="count" ng-model="item.count">
+
+    <label for="view">view</label>
+    <input type="text" id="view" ng-model="item.view">
+
+    <label for="image">image</label>
+    <input type="file" id="image" ng-model="item.image" ng-file-select="onfileSelect($files)">
+
+    
+    <input type="button" ng-click="onFormSubmit(item)" class="btn btn-large btn-primary" value="update item">
+  </fieldset>
+</form>

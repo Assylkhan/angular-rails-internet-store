@@ -1,0 +1,16 @@
+<div id="showItem">
+<!--   <p>
+    <em>{{item.name}}</em>
+  </p> -->
+  <div class="image">
+    <img ng-src="https://s3.amazonaws.com/Angular-rails-store/images/{{item.id}}/{{item.image_file_name}}">
+  </div>
+  <ul>
+    <li>{{item.view}}</li>
+    <li><i>model:</i> <strong>{{item.name}}</strong></li>
+    <li><i>cost:</i> <strong>{{item.price}} $</strong></li>
+    <li><i>description:</i> <strong>{{item.description}}</strong></li>
+    <li><i>weight:</i> <strong>{{item.weight}}</strong></li>
+    <li><a class="btn btn-success" ng-click="edit()">edit</a></li>
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+<form class="session">
+  <fieldset>
+    <label for="name">name</label>
+    <span ng-repeat="error in error_item.name"> *{{error}}</span>
+    <input type="text" id="name" ng-model="item.name">
+
+    <label for="real_price">real_price</label>
+    <span ng-repeat="error in error_item.real_price">* {{error}}</span>
+    <input type="text" id="real_price" ng-model="item.real_price">
+
+    <label for="price">price</label>
+    <span ng-repeat="error in error_item.price">* {{error}}</span>
+    <input type="text" id="price" ng-model="item.price">
+
+    <label for="description">description</label>
+    <span ng-repeat="error in error_item.description">* {{error}}</span>
+    <textarea rows="3" cols="34" id="description" ng-model="item.description"></textarea>
+
+    <label for="weight">weight</label>
+    <span ng-repeat="error in error_item.weight">* {{error}}</span>
+    <input type="text" id="weight" ng-model="item.weight">
+
+    <label for="count">count</label>
+    <span ng-repeat="error in error_item.count">* {{error}}</span>
+    <input type="text" id="count" ng-model="item.count">
+
+    <label for="view">view</label>
+    <span ng-repeat="error in error_item.view">* {{error}}</span>
+    <input type="text" id="view" ng-model="item.view">
+
+    <label for="image">image</label>
+    <input type="file" id="image" ng-model="item.image" ng-file-select="onfileSelect($files)">
+    
+    <input type="button" ng-click="onFormSubmit(item)" class="btn btn-large btn-primary" value="update item">
+  </fieldset>
+</form>

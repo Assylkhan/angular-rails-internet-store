@@ -1,0 +1,38 @@
+<div id="users">
+  <div class="Cart">
+    <a ui-sref=".showCart">
+      <img style="height: 40px; width: 60px" src="https://s3.amazonaws.com/Angular-rails-store/icons/cart.jpeg"><span>My cart</span>
+      <br>
+      <span>{{count}} {{item}}</span> |
+      <span>{{summ}} $</span>
+    </a>
+  </div>
+  <div id='cssmenu'>
+      <ul>
+         <li><a ui-sref=".items">Home</a></li>
+         <li><a>Sign up</a>
+         <li ng-show="loggedIn()" class='active'><a>Account</a>
+            <ul>
+               <li><a ui-sref=".profile">Profile</a></li>
+               <li><a ng-click="logOut()">Log out</a></li>
+            </ul>
+         </li>
+         <li ng-hide="loggedIn()"><a ui-sref=".login">log in</a></li>
+         <li><a href='https://github.com/Assylkhan'>Contact</a></li>
+      </ul>
+  </div>
+  
+  <div class="content" ui-view></div>
+  
+  <footer class="footer">
+    <small>
+      <a href="https://github.com/Assylkhan">Assylkhan Rakhatov</a>
+    </small>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </footer>
+</div>

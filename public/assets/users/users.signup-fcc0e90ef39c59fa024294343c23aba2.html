@@ -1,0 +1,16 @@
+<h1>Signup</h1>
+
+<form class="session">
+  <fieldset>
+    <label for="email">email</label>
+    <input type="text" id="email" ng-model="email">
+
+    <label for="password">password</label>
+    <input type="password" id="password" ng-model="password">
+
+    <label for="password_confirmation">confirm password</label>
+    <input type="password" id="password_confirmation" ng-model="password_confirmation">
+    
+    <input type="button" ng-click="signup(email, password, password_confirmation)" class="btn btn-large btn-primary" value="sign up">
+  </fieldset>
+</form>

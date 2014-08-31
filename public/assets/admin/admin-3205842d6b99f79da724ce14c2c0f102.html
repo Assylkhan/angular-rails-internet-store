@@ -1,0 +1,34 @@
+<div id="admin">
+  
+  <div id='cssmenu'>
+    <ul>
+       <li><a ui-sref=".items">Home</a></li>
+       <li class='active'><a>Settings</a>
+          <ul>
+             <li><a>Orders</a></li>
+             <li><a ui-sref=".createItem">Create new item</a></li>
+             <li><a ng-click="logOut()">Log out</a></li>
+          </ul>
+       </li>
+       <li><a href='https://github.com/Assylkhan'>Contact</a></li>
+       <li><span class="badge alert-info" style="margin-top: 20px;">{{users.count}}</span></li>
+    </ul>
+  </div>
+
+  <div class="content" ui-view></div>
+
+<footer class="footer">
+  <small>
+    <em>Internet store</em>
+    by Assylkhan Rakhatov
+  </small>
+  <nav>
+    <ul>
+      <li>About</li>
+      <li>Contact</li>
+      <li><a>News</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</div>

@@ -1,0 +1,18 @@
+<h1>My cart</h1>
+<p ng-hide="cart">{{message}}</p>
+<div ng-show="cart">
+  <table class="table table-striped">
+    <th>#</th>
+    <th>description</th>
+    <th>quantity</th>
+    <th>cost, $</th>
+    <th>action</th>
+    <tr ng-repeat="index in cart">
+      <td>{{index.item.id}}</td>
+      <td>{{index.item.name}}, {{index.item.view}}</td>
+      <td><counter index="index"></counter></td>
+      <td>{{index.item.price}}</td>
+      <td><a ng-click="removeFromCart(index.id)"></a></td>
+    </tr>
+  </table>
+</div>
