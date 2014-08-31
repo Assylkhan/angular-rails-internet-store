@@ -32,7 +32,10 @@ angular.module('Shop').factory('itemsFactory', ['$http', '$q', '$rootScope', 'st
     index['quantity'] = 0
     # quantity = 0 if quantity is undefined
     have = false
-    cart = storage.get('cart')
+    if storage.get('cart') is null
+      cart = []
+      storage.set('cart', cart)
+    cart = storage.get('cart') 
     _.each(cart, (key) ->
 
       if key.id is item.id
