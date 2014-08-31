@@ -16,7 +16,7 @@
       if search_phrase != undefined
         $scope.itemsCount = "found "+response.data.items_count+" items"
       if response.data.items_count == 0
-        $scope.itemsCount = "no such item in store"
+        $scope.itemsCount = "no items in store"
     , ->
       console.log("error in items")
     )
