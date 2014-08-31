@@ -1,0 +1,26 @@
+<div class="showCart">
+  <h1>My cart</h1>
+  <p ng-hide="cart">{{message}}</p>
+  <p>{{sent}}</p>
+  <div ng-show="cart">
+    <table class="table table-striped">
+      <th>#</th>
+      <th>description</th>
+      <th>quantity</th>
+      <th>cost, $</th>
+      <th>action</th>
+      <tr ng-repeat="index in cart" class="animate" ng-class="'animate'" id="item_{{index.id}}">
+        <td>{{$index + 1}}</td>
+        <td>{{index.item.name}}, {{index.item.view}}</td>
+        <td><counter item-raw="deleteRaw(id)" index="index"></counter></td>
+        <td>{{index.item.price}}</td>
+        <td><a ng-click="removeFromCart(index.id)">remove</a></td>
+      </tr>
+    </table>
+    <div style="text-align: right;">
+      <button ng-hide="loggedIn()" ng-click="login()" class="btn btn-large btn-primary">Log in and order</button>
+      <button ng-hide="loggedIn()" ng-click="signup()" class="btn btn-large btn-success">Sign up and order</button>
+      <button ng-click="order()" ng-show="loggedIn()" class="btn btn-large btn-success">Order</button>
+    </div>
+  </div>
+</div>

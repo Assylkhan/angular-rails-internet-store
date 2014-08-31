@@ -1,0 +1,21 @@
+<div id="orders">
+  <table class="table table-hover table-striped" id="ordersTable">
+    <th>Order id</th>
+    <th>Client email</th>
+    <th>Summ</th>
+    <th>Received time</th>
+    <tr ng-repeat="order in orders" ng-click="orderContent(order.order_id)">
+      <td>{{order.order_id}}</td>
+      <td>{{order.client_email}}</td>
+      <td>{{order.summ}}</td>
+      <td>{{order.received_date | date: 'medium'}}</td>
+    </tr>
+  </table>
+
+  <br class="clear">
+  
+  <ul class="pagination">
+    <li ng-repeat="n in range" ng-class="{active: n == currentPage}" ng-click="getPage(n)"><a href="#">{{n}}</a></li>
+  </ul>
+  
+</div>

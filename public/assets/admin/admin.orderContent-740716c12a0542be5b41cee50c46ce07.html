@@ -1,0 +1,30 @@
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="orderContent">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <th>id</th>
+            <th>item id</th>
+            <th>name</th>
+            <th>type</th>
+            <th>price</th>
+            <th>quantity</th>
+            <tr ng-repeat="item in orderItems">
+              <td>{{$index + 1}}</td>
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.view}}</td>
+              <td>{{item.price}}</td>
+              <td>{{item.quantity}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button ng-click="close()" class="btn btn-success" data-dismiss="modal">close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
