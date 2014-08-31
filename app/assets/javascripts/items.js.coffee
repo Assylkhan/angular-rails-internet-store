@@ -30,27 +30,6 @@ Shop.config(['$httpProvider', ($httpProvider) ->
   $httpProvider.responseInterceptors.push interceptor
 ])
 
-# checkRouting = ($q, $rootScope, $location, Session) ->
-#   if !!Session.currentUser
-#     console.log("Session.currentUser")
-#     true
-#   else
-#     defered = $q.defer()
-#     if Session.isAuthenticated()
-#       defered.resolve true
-#       console.log("Session.isAuthenticated")
-#       return
-#     else
-#       defered.reject()
-#       $location.path "/users/signin"
-#       return
-
-#     defered.promise
-# angular.module('Shop').provider($stateProvider, () ->
-#   this.$get = ($http) ->
-#     return $stateProvider
-# )
-
 Shop.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
 
   $stateProvider
@@ -94,15 +73,11 @@ Shop.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouter
       templateUrl: "../assets/admin/admin.updateItem.html"
       controller: "AdminUpdateItem"
 
+
     .state "admin.orders", 
       url: "/orders" 
       templateUrl: "../assets/admin/admin.orders.html"
       controller: "AdminOrders"
-
-    # .state "admin.orderContent", 
-    #   url: "/orders/:id" 
-    #   templateUrl: "../assets/admin/admin.orderContent.html"
-    #   controller: "AdminOrderContent"
     
 
     .state "users", 
@@ -181,4 +156,6 @@ Shop.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouter
       url: "/items/:itemId"
       templateUrl: "../assets/users/users.showItem.html"
       controller: 'ShowItem'
+
+    $urlRouterProvider.when('', "/users/items")
 ])
