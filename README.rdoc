@@ -5,6 +5,6 @@ This site includes:
 - admin and users roles;
 - users authentication (bcrypt);
 - server-side pagination (kaminari) and searching;
-- image uploading (angular-file-upload) from browser to server, then rails app saves it within amazon s3 via paperclip gem;
+- image uploading [angular-file-upload](https://github.com/Assylkhan/angular-file-upload) from browser to server, then rails app saves it within amazon s3 via paperclip gem;
 - for angular architecture was used ui-router;
 - to store items in cart i've used angularLocalStorage module. 
