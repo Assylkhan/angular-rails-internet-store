@@ -595,10 +595,12 @@ footer {
     border: 1px solid #eaeaea;
     -webkit-border-radius: 5px;
             border-radius: 5px;
-    height: 220px !important;
+    height: 237px !important;
     position: relative;
     z-index: 10;
-    &:last-child button {
+    overflow: hidden;
+  
+    &:last-child span {
       visibility: visible !important;
       margin-top: 10px;
     }
@@ -615,7 +617,7 @@ footer {
       a {
         display: inline-block;
       }
-      a:last-child button {
+      a:last-child span {
         margin-top: 10px;
         visibility: hidden;
       }
