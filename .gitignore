@@ -17,3 +17,5 @@
 config/secrets.yml
 config/initializers/aws.rb
 config/initializers/aws.rb
+config/initializers/aws.rb
+config/initializers/aws.rb
