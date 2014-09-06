@@ -1,0 +1,25 @@
+<h1>items</h1>
+<div id="items">
+  <p>
+    <input class="col-md-3" type="text" ng-model="search" placeholder="Search">
+    <input type="button" value="search" ng-click="getItems(search)">
+  </p>
+  <p>{{itemsCount}}</p>
+  <ul id="itemList">
+    <li ng-repeat="item in items" class="animating">
+      <a ng-click="showItem(item.id)" id="{{item.id}}">
+        <div><img class="img-thumbnail" ng-src="https://s3.amazonaws.com/Angular-rails-store/images/{{item.id}}/{{item.image_file_name}}"></div>
+        <div style="font-size: 1em;"><strong>{{item.name}}</strong></div>
+        <div style="color: #908787; font-size: 0.9em">{{item.view}}</div>
+        <div style="color:#2691CD; font-size: 1.1em">{{item.price}}$</div>
+        <div><span>{{item.description}}</span></div>
+      </a>
+    </li>
+  </ul>
+  
+  <br class="clear">
+    
+  <ul class="pagination">
+    <li ng-repeat="n in range" ng-class="{active: n == currentPage}" ng-click="getPage(n)"><a href="#">{{n}}</a></li>
+  </ul>
+</div>
