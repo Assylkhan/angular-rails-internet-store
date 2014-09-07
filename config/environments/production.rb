@@ -1,15 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
-  # config.paperclip_defaults = {
-  #   :storage => :s3,
-  #   :s3_credentials => {
-  #     :bucket => ENV['Angular-rails-store'],
-  #     :access_key_id => ENV['AKIAII2GLFOINVDYEKUQ'],
-  #     :secret_access_key => ENV['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']
-  #   }
-  # }
-  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
