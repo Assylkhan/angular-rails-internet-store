@@ -14,5 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-config/secrets.yml
-config/initializers/aws.rb
+
+# Ignore application configuration
+/config/application.yml

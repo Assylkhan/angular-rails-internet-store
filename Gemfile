@@ -39,6 +39,7 @@ gem 'kaminari'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'websocket-rails'
+gem 'figaro'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
